@@ -1,5 +1,6 @@
 #include "mainwidget.h"
 #include "ui_mainwidget.h"
+#include <QMessageBox>
 
 MainWidget::MainWidget(QWidget *parent) :
     QWidget(parent),
@@ -38,6 +39,19 @@ void MainWidget::on_btn_process_clicked()
         {
             image.save(value);
         }
+    }
+
+    if (listImages.size() > 0)
+    {
+        QMessageBox::information(0,
+                                 tr("Tips"),
+                                 tr("Process cuccessfully!"));
+    }
+    else
+    {
+        QMessageBox::information(0,
+                                 tr("Tips"),
+                                 tr("There is no images in directory!"));
     }
 }
 
