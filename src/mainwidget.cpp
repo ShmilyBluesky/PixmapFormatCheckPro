@@ -6,6 +6,8 @@ MainWidget::MainWidget(QWidget *parent) :
     ui(new Ui::MainWidget)
 {
     ui->setupUi(this);
+
+    ui->edit_suffix->setText(".png,.jpg,.bmp");
 }
 
 MainWidget::~MainWidget()
